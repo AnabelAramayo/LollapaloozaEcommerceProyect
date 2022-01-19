@@ -1,0 +1,194 @@
+* {
+    margin:0;
+    box-sizing: border-box;
+}
+
+/*index y merch*/
+body {
+    font-family: sans-serif;
+    padding-top: 90px;
+}
+
+/*header index y merch*/
+header {
+    background-color: #FFFFFF;
+    height: 80px;
+    width: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+
+/*navBar index y merch*/
+.navBar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+/*navMenuLink index y merch*/
+.navMenuLink {
+    color:#000000;
+    text-decoration: none;
+}
+
+/*logo index y merch*/
+.logo{
+    width: 250px;
+    height: 50px;
+}
+
+/*navMenu  index y merch*/
+.navMenu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+/*navMenuItem index y merch*/
+.navMenuItem {
+    font-size: 18px;
+    margin:0 10px;
+    line-height:80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+/*navMenuLink index y merch*/
+.navMenuLink{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+/*navMenuLink index y merch*/
+.navMenuLink:hover {
+    background-color:#DF53B4;
+    transition:0.5s;
+}
+
+/*footer index y merch*/
+footer {
+    background-color: #313237;
+    color:white;
+    font-family: sans-serif;
+    width: 100%;
+    height: 400px;
+    padding: 50px 0px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navRedesSocialesMenu {
+    list-style: none;
+}
+
+.navRedesSocialesLink {
+    color:white;
+    text-decoration: none;
+}
+
+.redesSocialesItem{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logoAA{
+    width: 250px;
+    height: 70px;
+}
+
+.suscribite {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputSuscribite {
+    padding: 7px 30px; 
+}
+
+.botonSuscribite {
+    padding: 7px 30px;
+    background-color: #525354;
+    color:white;
+    font-family: sans-serif;
+}
+
+/*index*/
+.banner,
+video, 
+.imgLove {
+    width: 100%;
+}
+
+/*index*/
+.nosotros,
+.comida {
+    background-color: #313237;
+    color:white;
+    font-family: sans-serif;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/*index*/
+.nosotrosTexto,
+.comidaTexto {
+    padding:0 80px;
+}
+
+/*index*/
+.nosotros h2,
+.comida h2 {
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+
+/*index*/
+.fotoComida {
+    width: 52.4%;
+}
+
+/*merch*/
+.productos{
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.remeras,
+.posters {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 50px 20px;
+}
+
+/*merch*/
+.fotoRemera,
+.fotoPoster {
+    width: 250px;
+    height: 350px;
+    padding: 10px;
+}
+
+/*Creditos*/
+.creditos {
+    background-color:#000000;
+    color:white;
+    font-size:15px;
+    text-align:center;
+    font-family: sans-serif;
+    padding: 5px;
+}

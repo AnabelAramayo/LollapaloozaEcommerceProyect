@@ -3,17 +3,86 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js" language="javascript" type="text/javascript"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
-
+    <title>Lollapalooza Argentina</title>
 </head>
 
 <body>
     <!--Header-->
     <header>
-
+        <!--Barra navegadora-->
+        <nav class="navBar">
+            <a href="#"><img class="logo" src="img/logo.png" alt="logoLollar"></a>
+            <ul class="navMenu">
+                <li class="navMenuItem"><a href="#" class="navMenuLink">LineUp</a></li>
+                <li class="navMenuItem"><a href="#" class="navMenuLink">Información</a></li>
+                <li class="navMenuItem"><a href="/merch.html" class="navMenuLink">Merch</a></li>
+                <li class="navMenuItem"><a href="#" class="navMenuLink">Tickets</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <!--Cuerpo-->
+    <main>
+        <img class="banner" src="img/header.jpeg">
+
+        <!--Información general-->
+        <div class="nosotros">
+            <section class="nosotrosTexto">
+                <h2>La música está en nuestro ADN</h2>
+                <p>3 días, 5 escenarios y más de 100 bandas de todo el mundo. Cada edición nos trae los mejores shows en
+                    vivo, el arte, los más variados sabores y un sinfín de nuevas experiencias.</p>
+            </section>
+            <img src="img/personasSaltando.jpg" alt="personasSaltando">
+        </div>
+        <div class="comida">
+            <img class="fotoComida" src="img/hamburguesa.jpg" alt="hamburguesa">
+            <section class="comidaTexto">
+                <h2>Lolla Food</h2>
+                <p>Lollapalooza te trae las propuestas gastronómicas de los chefs argentinos más reconocidos del mundo
+                    para disfrutar de los mejores sabores mientras escuchas a tu artista favorito.</p>
+            </section>
+        </div>
+        <video controls>
+            <source src="img/lollaVideo.mp4" type="video/mp4">
+        </video>
+    </main>
+
+    <footer>
+        <img class="logoAA" src="img/AAlogo.png" alt="logo">
+
+        <!--Suscribite-->
+        <section class="suscribite">
+            <p>Suscribite</p>
+            <input class="inputSuscribite" type="email" placeholder="Ej: lolla@palooza.com.ar">
+            <button type="submit" value="Sucribite" class="botonSuscribite">Enviar</button>
+        </section>
+
+        <!--Redes Sociales-->
+        <section class="redesSociales">
+            <nav class="navRedesSociales">
+                <ul class="navRedesSocialesMenu">
+                    <li class="redesSocialesItem"><a href="https://www.instagram.com/lollapaloozaar/"
+                            class="navRedesSocialesLink" target="_blank">Instagram</a></li>
+                    <li class="redesSocialesItem"><a href="https://twitter.com/lollapaloozaar"
+                            class="navRedesSocialesLink" target="_blank">Twitter</a></li>
+                    <li class="redesSocialesItem"><a href="https://www.facebook.com/lollapaloozaar"
+                            class="navRedesSocialesLink" target="_blank">Facebook</a></li>
+                    <li class="redesSocialesItem"><a href="https://www.youtube.com/user/lollapaloozaar"
+                            class="navRedesSocialesLink" target="_blank">Youtube</a></li>
+                </ul>
+            </nav>
+        </section>
+
+    </footer>
+
+    <!--Creditos-->
+    <section class="creditos">
+        <p>Hecho por Anabel Aramayo</p>
+    </section>
 </body>
 
 </html>
