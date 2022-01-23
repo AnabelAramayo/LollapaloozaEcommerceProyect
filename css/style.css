@@ -75,7 +75,7 @@ footer {
     font-family: sans-serif;
     width: 100%;
     height: 400px;
-    padding: 50px 0px;
+    /*padding: 50px 0px;*/
     display:flex;
     align-items: center;
     justify-content: space-around;
@@ -109,6 +109,8 @@ footer {
 
 .inputSuscribite {
     padding: 7px 30px; 
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .botonSuscribite {
@@ -145,7 +147,7 @@ video,
 
 /*index*/
 .nosotros h2,
-.comida h2 {
+.comida h2{
     font-size: 40px;
     padding-bottom: 25px;
 }
@@ -158,29 +160,159 @@ video,
 /*merch*/
 .productos{
     font-family: sans-serif;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-size: 25px;
     display:flex;
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
+    font-size: 18px;
+}
+
+.productos h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.barraFiltros{
+    display:flex;
+    width: 300px;
+    justify-content:space-around;
+}
+
+.descripcion {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding: 15px 50px 15px 50px;
+}
+.contenedorProducto {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.contenedorProducto p {
+    padding-top:10px;
+    
+}
+
+.textoLineup {
+    height:150px;
+    width:600px;
+}
+
+.contenedorLineup{
+    display:flex;
+    justify-content:space-around;
+}
+
+.tituloLineup{
+    text-transform: uppercase;
+    font-size:50px;
+    color:#0F071F;
+}
+
+.botonAgregarAlCarrito {
+        padding: 7px 30px;
+        background-color: #AAB7B8;
+        color:black;
+        font-family: sans-serif;
+        border: 0;
+        margin-top:15px;
 }
 
 .remeras,
-.posters {
+.posters,
+.accesorios {
     display:flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 50px 20px;
+    flex-wrap:wrap;
 }
 
 /*merch*/
 .fotoRemera,
-.fotoPoster {
+.fotoPoster,
+.fotoAccesorio {
     width: 250px;
     height: 350px;
     padding: 10px;
+}
+
+.principalLineup{
+    margin-top:100px;
+}
+
+.imgLineup{
+    width: 400px;
+    height: 600px;
+}
+
+
+.bannerLineup {
+    width:100%;
+    height: 600px;
+}
+
+/*
+VER PORQUE NO AGARRA LA IMG DE FONDO
+
+.mainLineup{
+    background-image:url("img/hamburguesa.jpg");
+}*/
+
+.barraDeBusqueda{
+    background-color:#F23535;
+    height: 60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    top: 80px;
+    width:100%;
+}
+
+.barraFiltros{
+    background-color:#F23535;
+    height: 30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    top: 140px;
+    width:100%;
+    color:white;
+}
+
+.inputBusqueda{
+    height: 30px;
+    width: 65%;
+    border:0;
+}
+
+.botonBuscar{
+    border:0;
+    height: 30px;
+    width: 40px;
+}
+
+
+.contenedorPregunta {
+    margin:20px;
+}
+
+.tituloPregunta {
+    text-transform: uppercase;
+    font-size:30px;
+    color:#0F071F;
+}
+
+.respuestaPregunta{
+    padding-top:20px;
+    font-size:15px;
 }
 
 /*Creditos*/

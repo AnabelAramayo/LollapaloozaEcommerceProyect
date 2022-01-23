@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <script src="main.js" language="javascript" type="text/javascript"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Merch</title>
@@ -17,32 +19,218 @@
         <nav class="navBar">
             <a href="/index.html"><img class="logo" src="img/logo.png" alt="logoLollar"></a>
             <ul class="navMenu">
-                <li class="navMenuItem"><a href="#" class="navMenuLink">LineUp</a></li>
-                <li class="navMenuItem"><a href="/index.html" class="navMenuLink">Información</a></li>
+                <li class="navMenuItem"><a href="/lineup.html" class="navMenuLink">LineUp</a></li>
+                <li class="navMenuItem"><a href="/informacion.html" class="navMenuLink">Información</a></li>
                 <li class="navMenuItem"><a href="#" class="navMenuLink">Merch</a></li>
                 <li class="navMenuItem"><a href="#" class="navMenuLink">Tickets</a></li>
+                <li class="navMenuItem"><a href="#" class="navMenuLink"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
     </header>
+
     <main>
+
+        <!--Barra de búsqueda-->
+        <div class="barraDeBusqueda">
+            <input class="inputBusqueda" type="text" placeholder=" ¿Qué estas buscando? ">
+            <button type="button" class="botonBuscar"><i class="fas fa-search"></i></button>
+        </div>
+
+        <!--Barra de filtros-->
+
+        <section class="barraFiltros">
+            <p>Filtrar por</p>
+            <div class="categoriaLista">
+                <a href="#" id="categoriaItem" category="todo">Todo</a>
+                <a href="#" id="categoriaItem" category="remera">Remeras</a>
+                <a href="#" id="categoriaItem" category="buzo">Buzos</a>
+                <a href="#" id="categoriaItem" category="poster">Posters</a>
+                <a href="#" id="categoriaItem" category="riñonera">Riñoneras</a>
+                <a href="#" id="categoriaItem" category="barbijo">Barbijos</a>
+                <a href="#" id="categoriaItem" category="gorro">Gorros</a>
+            </div>
+        </section>
+
         <img class="imgLove" src="img/LOVE1.jpg">
+
+        <!--PRODUCTOS-->
         <div class="productos">
-            <h2>Nuestras Remeras</h2>
+
+            <!--REMERAS-->
+            <h2>Vestite con estilo</h2>
+            <p class="descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam omnis nemo provident,
+                ipsum rem
+                laboriosam perspiciatis est exercitationem vitae molestiae ab reprehenderit aspernatur nulla eaque?</p>
+
             <section class="remeras">
-                <img class="fotoRemera" src="img/remera1.jpg" alt="remera1">
-                <img class="fotoRemera" src="img/remera2.jpg" alt="remera2">
-                <img class="fotoRemera" src="img/remera3.jpg" alt="remera3">
-                <img class="fotoRemera" src="img/remera4.jpg" alt="remera4">
-                <img class="fotoRemera" src="img/remera5.jpg" alt="remera5">
+                <section class="contenedorProducto" category="remera">
+                    <img class="fotoRemera" src="img/remera1.jpg" alt="remeraStayAway">
+                    <p>Remera Stay Away</p>
+                    <p>$3500</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="remera">
+                    <img class="fotoRemera" src="img/remera2.jpg" alt="remera2">
+                    <p>Remera Brain Dead</p>
+                    <p>$2700</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="remera">
+                    <img class="fotoRemera" src="img/remera3.jpg" alt="remera3">
+                    <p>Remera Cereales</p>
+                    <p>$3000</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="remera">
+                    <img class="fotoRemera" src="img/remera4.jpg" alt="remera4">
+                    <p>Remera Stay Trippy</p>
+                    <p>$2500</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="remera">
+                    <img class="fotoRemera" src="img/remera5.jpg" alt="remera5">
+                    <p>Remera Mind Control</p>
+                    <p>$3100</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="remera">
+                    <img class="fotoRemera" src="img/remera6.jpg" alt="remera6">
+                    <p>Remera Devil</p>
+                    <p>$2100</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="buzo">
+                    <img class="fotoRemera" src="img/buzo1.jpg" alt="buzo1">
+                    <p>Buzo TOP</p>
+                    <p>$2100</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="buzo">
+                    <img class="fotoRemera" src="img/buzo2.jpg" alt="buzo2">
+                    <p>Buzo Esqueleto</p>
+                    <p>$5100</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="buzo">
+                    <img class="fotoRemera" src="img/buzo3.jpg" alt="buzo3">
+                    <p>Buzo Obey</p>
+                    <p>$4100</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
             </section>
+
+            <!--POSTERS-->
             <h2>Posters</h2>
+            <p class="descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam omnis nemo provident,
+                ipsum rem
+                laboriosam perspiciatis est exercitationem vitae molestiae ab reprehenderit aspernatur nulla eaque?</p>
+
+            <!--Barra de filtros-->
+
             <section class="posters">
-                <img class="fotoPoster" src="img/STROKESposter.jpg" alt="strokesposter">
-                <img class="fotoPoster" src="img/TAMEIMPALAposter.jpg" alt="tameimpalaposter">
-                <img class="fotoPoster" src="img/TLSPposter.jpg" alt="tlsplposter">
-                <img class="fotoPoster" src="img/ARCTICMONKEYSposter.jpg" alt="amposter">
-                <img class="fotoPoster" src="img/GORILLAZposter.jpg" alt="GORILLAZposter">
+                <section class="contenedorProducto" category="poster">
+                    <img class="fotoPoster" src="img/STROKESposter.jpg" alt="strokesposter">
+                    <p>The Strokes</p>
+                    <p>$1000</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="poster">
+                    <img class="fotoPoster" src="img/TAMEIMPALAposter.jpg" alt="tameimpalaposter">
+                    <p>Tame Impala Psico</p>
+                    <p>$900</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="poster">
+                    <img class="fotoPoster" src="img/TLSPposter.jpg" alt="tlsplposter">
+                    <p>The last shadow puppets</p>
+                    <p>$1100</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="poster">
+                    <img class="fotoPoster" src="img/ARCTICMONKEYSposter.jpg" alt="amposter">
+                    <p>Arctic Monkeys Espacio</p>
+                    <p>$1000</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="poster">
+                    <img class="fotoPoster" src="img/GORILLAZposter.jpg" alt="GORILLAZposter">
+                    <p>Gorillaz</p>
+                    <p>$980</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="poster">
+                    <img class="fotoPoster" src="img/fooPoster.jpg" alt="Fooposter">
+                    <p>Foo Fighters</p>
+                    <p>$800</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="poster">
+                    <img class="fotoPoster" src="img/amPosterDos.jpg" alt="ArcticMoneys">
+                    <p>Arctic Monkeys</p>
+                    <p>$700</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="poster">
+                    <img class="fotoPoster" src="img/tamePoster.jpg" alt="TameImpalaPoster">
+                    <p>Tame Impala</p>
+                    <p>$990</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="poster">
+                    <img class="fotoPoster" src="img/redHotPoster.jpg" alt="RedHotPoster">
+                    <p>Red Hot Chilli Peppers</p>
+                    <p>$2000</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="poster">
+                    <img class="fotoPoster" src="img/dragonsPoster.jpg" alt="DragonPoster">
+                    <p>Imagine Dragons</p>
+                    <p>$500</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
             </section>
+
+            <!--ACCESORIOS-->
+            <h2>Accesorios</h2>
+            <p class="descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam omnis nemo provident,
+                ipsum rem
+                laboriosam perspiciatis est exercitationem vitae molestiae ab reprehenderit aspernatur nulla eaque?</p>
+
+            <!--Barra de filtros-->
+
+            <section class="accesorios">
+                <section class="contenedorProducto" category="riñonera">
+                    <img class="fotoAccesorio" src="img/rino1.jpg" alt="rino1">
+                    <p>Riñonera Alex</p>
+                    <p>$1100</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="riñonera">
+                    <img class="fotoAccesorio" src="img/rino2.jpg" alt="rino2">
+                    <p>Riñonera Colabo Kappa</p>
+                    <p>$1300</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="riñonera">
+                    <img class="fotoAccesorio" src="img/rino3.jpg" alt="tlsplposter">
+                    <p>Riñonera Feliz</p>
+                    <p>$800</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="barbijo">
+                    <img class="fotoAccesorio" src="img/barbijo.jpg" alt="barbijo">
+                    <p>Barbijo Hongos</p>
+                    <p>$500</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+                <section class="contenedorProducto" category="gorro">
+                    <img class="fotoAccesorio" src="img/gorrito.jpg" alt="gorrito">
+                    <p>Piluso</p>
+                    <p>$900</p>
+                    <button type="button" value="Comprar" class="botonAgregarAlCarrito">Agregar al carrito</button>
+                </section>
+            </section>
+
         </div>
         <img class="imgLove" src="img/LOVE.jpg">
     </main>
