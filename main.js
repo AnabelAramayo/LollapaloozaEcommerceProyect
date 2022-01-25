@@ -32,10 +32,11 @@ function costoTotal (agregarAlCarrito, cantidad) {
 console.log(costoTotal(posterStrokes, 3))
 console.log(costoTotal(posterTameImpala, 2))
 
-function buscarProducto (ingresaTuBusqueda){
-    while ((remeraDevil.nombre || remeraStayAway.nombre || posterStrokes.nombre || posterTameImpala.nombre || rinoneraAlex.nombre ||  remeraDevil.tipo || posterStrokes.tipo || rinoneraAlex.tipo) == ingresaTuBusqueda){
-        console.log('Aca esta lo que buscabas');
-    } console.log("No tenemos ese producto o banda, intentá buscando otra cosa")
-}
 
-buscarProducto("Alex");
+let esMayor = prompt('¿Listo para comprar tus entradas?');
+if (esMayor <= 'si') {
+let podesComprarEntradas = '';
+while (podesComprarEntradas<18) {
+    podesComprarEntradas = prompt("¿Cuantos años tenes? Tenes que ser mayor de edad para comprar entradas")
+} alert("Podes comprar entradas")
+} 
