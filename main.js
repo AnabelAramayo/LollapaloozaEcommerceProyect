@@ -15,15 +15,14 @@ let remeraDevil = new Producto("Remera", "Devil", 2100, true);
 let remeraStayAway = new Producto("Remera", "StayAway", 3500, false);
 let remeraBrainDead = new Producto('Remera', 'Brain Dead', 2700, true);
 let remeraCereales = new Producto('Remera', 'Cereales', 3000, false);
-let remeraStarTrippy = new Producto('Remera', 'Stay Trippy', 2500, true);
+let remeraStayTrippy = new Producto('Remera', 'Stay Trippy', 2500, true);
 let remeraMindControl = new Producto('Remera', 'Mind Control', 3100, true);
 
 let buzoTop = new Producto('Buzo', 'Top', 2100, false);
-let buzoEsqueleto = new Procuto('Buzo', 'Esqueleto', 2100, true);
+let buzoEsqueleto = new Producto('Buzo', 'Esqueleto', 2100, true);
 let buzoObey = new Producto('Buzo', 'Obey', 4100, false);
 
 let posterStrokes = new Producto("Poster", "The Strokes", 1000, true);
-let posterTameImpala = new Producto("Poster", "Tame Impala", 990, false);
 let posterTameImpalaPsico = new Producto('Poster', 'Tame Impala Psico', 900, true);
 let posterTLSP = new Producto('Poster', 'The last shadow puppets', 1100, false);
 let posterAMEspacio = new Producto('Poster', 'Arctic Monkeys', 1000, true);
@@ -81,22 +80,31 @@ let arrayRinoneras = [
     rinoneraFeliz
 ];
 
+let productosALaVenta = [
+    arrayRemeras,
+    arrayBuzos,
+    arrayPosters,
+    arrayRinoneras,
+    barbijoHongos,
+    gorroPiluso
+];
 
 
 // FUNCIONES
 //Calcular el costo total de un producto
-function costoTotal(agregarAlCarrito, cantidad) {
+
+function costoTotalPorProducto(producto, cantidad) {
     let costoTotal = 0;
-    if (agregarAlCarrito.stock != false) {
-        costoTotal = agregarAlCarrito.costo * cantidad;
-        return "El costo total del producto es de " + costoTotal;
+    if (producto.stock != false) {
+        costoTotal = producto.costo * cantidad;
+        return "El costo total es de " + costoTotal + ' .Te estas llevando '+ cantidad + producto.tipo;
     } else {
-        return 'No tenemos stock por ahora del ' + agregarAlCarrito.tipo + ' ' + agregarAlCarrito.nombre + ', nuestra culpa, acá tenes un descuento del %5 para tu próxima compra';
+        return 'No tenemos stock por ahora del ' + producto.tipo + ' ' + producto.nombre + ', nuestra culpa, acá tenes un descuento del %5 para tu próxima compra';
     }
 }
 
-//console.log(costoTotal(posterStrokes, 3))
-//console.log(costoTotal(posterTameImpala, 2))
+//console.log(costoTotalPorProducto(posterStrokes, 3))
+//console.log(costoTotalPorProducto(posterTameImpala, 2))
 
 //Primera entrega
 /*
@@ -109,17 +117,20 @@ if (esMayor <= 'si') {
 }
 */
 
-// El cliente pone productos en una canasta y la canasta los cuenta
-
-let carritoDeCompras = [];
-
-function agregarProductoAlCarrito () {
-    
-}
 
 // filtrar productos que tienen stock
 
-function tienenStock () {
-    
+function tienenStock (array) {
+    let productoConStock = [];
+    for (let i = 0; i <array.length; i++) {
+    if (array[i].stock == true) {
+        productoConStock.push(array[i])
+    } }
+    return productoConStock;
 }
+
+console.log(tienenStock(arrayRemeras))
+
+//
+
 
