@@ -1,15 +1,17 @@
 /*Productos*/
-function Producto(tipo, nombre, costo, stock) {
+
+function Producto(tipo, nombre, precio, stock) {
     this.tipo = tipo;
     this.nombre = nombre;
-    this.costo = costo;
+    this.precio = precio;
     this.stock = stock;
 
 
     this.infoDelProducto = function () {
-        console.log("El producto es un/a " + this.tipo + ". Su nombre es: " + this.nombre + ". Cuesta: " + this.costo + (this.stock == true ? ". Hay stock" : ". No hay stock"));
+        console.log("El producto es un/a " + this.tipo + ". Su nombre es: " + this.nombre + ". Cuesta: " + this.precio + (this.stock == true ? ". Hay stock" : ". No hay stock"));
     }
 }
+
 
 let remeraDevil = new Producto("Remera", "Devil", 2100, true);
 let remeraStayAway = new Producto("Remera", "StayAway", 3500, false);
@@ -93,18 +95,16 @@ let productosALaVenta = [
 // FUNCIONES
 //Calcular el costo total de un producto
 
-function costoTotalPorProducto(producto, cantidad) {
+let costoTotalPorProducto = (producto, cantidad) => {
     let costoTotal = 0;
-    if (producto.stock != false) {
-        costoTotal = producto.costo * cantidad;
-        return "El costo total es de " + costoTotal + ' .Te estas llevando '+ cantidad + producto.tipo;
+    if (producto.stock) {
+        costoTotal = producto.precio * cantidad;
+        return "El costo total es de " + costoTotal + '. Te estas llevando ' + cantidad + ' ' + producto.tipo;
     } else {
         return 'No tenemos stock por ahora del ' + producto.tipo + ' ' + producto.nombre + ', nuestra culpa, acá tenes un descuento del %5 para tu próxima compra';
     }
 }
 
-//console.log(costoTotalPorProducto(posterStrokes, 3))
-//console.log(costoTotalPorProducto(posterTameImpala, 2))
 
 //Primera entrega
 /*
@@ -120,17 +120,50 @@ if (esMayor <= 'si') {
 
 // filtrar productos que tienen stock
 
-function tienenStock (array) {
+function tienenStock(array) {
     let productoConStock = [];
-    for (let i = 0; i <array.length; i++) {
-    if (array[i].stock == true) {
-        productoConStock.push(array[i])
-    } }
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].stock == true) {
+            productoConStock.push(array[i])
+        }
+    }
     return productoConStock;
 }
 
-console.log(tienenStock(arrayRemeras))
 
-//
+// Agregar productos a mi carrito 
 
+let carrito = [];
+function agregarProductosAlCarrito() {
+    let agregarProductos = prompt('¿Qué queres llevarte?');
+    while (agregarProductos != 'nada') {
+        carrito.push(agregarProductos)
+    }
+    console.log('Te estas llevando ' + carrito)
+}
 
+function buscarEnElCarrito() {
+    let buscarProductoCarrito = prompt('Qué estas buscando de tu carrito?')
+    return carrito.filter((i) => i.nombre || i.tipo == buscarProductoCarrito)
+}
+
+function ordarPrecioMenorAMayor(array) {
+    return array.sort((a, b) => a.precio - b.precio)
+}
+
+function ordarPrecioMayorAMenor(array) {
+    return array.sort((a, b) => b.precio - a.precio)
+}
+
+function precioTotalaPagar () {
+    return carrito.reduce((acum, num)=>acum + num.precio, 0)
+}
+
+function sacarProductoDelCarrito (producto) {
+    let productoASacar = carrito.indexOf(producto);
+    if (productoASacar != -1) {
+        carrito.splice(productoASacar, 1)
+    }else {
+        console.log('No tenes ese producto en tu carrito')
+    }
+}
