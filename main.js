@@ -1,5 +1,5 @@
 /*Productos*/
-
+// REEMPLAZAR EL CONSTRUCTOR POR CLASES
 function Producto(tipo, nombre, precio, stock) {
     this.tipo = tipo;
     this.nombre = nombre;
@@ -130,34 +130,44 @@ function tienenStock(array) {
     return productoConStock;
 }
 
-
-// Agregar productos a mi carrito 
+console.log(tienenStock(arrayRemeras));
 
 let carrito = [];
 function agregarProductosAlCarrito() {
-    let agregarProductos = prompt('¿Qué queres llevarte?');
+    let agregarProductos = '';
     while (agregarProductos != 'nada') {
+        agregarProductos = prompt('¿Qué queres llevarte?');
         carrito.push(agregarProductos)
     }
     console.log('Te estas llevando ' + carrito)
 }
+
+agregarProductosAlCarrito();
 
 function buscarEnElCarrito() {
     let buscarProductoCarrito = prompt('Qué estas buscando de tu carrito?')
     return carrito.filter((i) => i.nombre || i.tipo == buscarProductoCarrito)
 }
 
+console.log(buscarEnElCarrito());
+
 function ordarPrecioMenorAMayor(array) {
     return array.sort((a, b) => a.precio - b.precio)
 }
+
+console.log(ordarPrecioMayorAMenor());
 
 function ordarPrecioMayorAMenor(array) {
     return array.sort((a, b) => b.precio - a.precio)
 }
 
+console.log(ordarPrecioMayorAMenor());
+
 function precioTotalaPagar () {
     return carrito.reduce((acum, num)=>acum + num.precio, 0)
 }
+
+console.log(precioTotalaPagar());
 
 function sacarProductoDelCarrito (producto) {
     let productoASacar = carrito.indexOf(producto);
@@ -167,3 +177,7 @@ function sacarProductoDelCarrito (producto) {
         console.log('No tenes ese producto en tu carrito')
     }
 }
+
+console.log(sacarProductoDelCarrito('buzoTOP'));
+
+
