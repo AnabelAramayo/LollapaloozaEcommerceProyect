@@ -1,14 +1,10 @@
 /*Productos*/
-// REEMPLAZAR EL CONSTRUCTOR POR CLASES
-function Producto(tipo, nombre, precio, stock) {
-    this.tipo = tipo;
-    this.nombre = nombre;
-    this.precio = precio;
-    this.stock = stock;
-
-
-    this.infoDelProducto = function () {
-        console.log("El producto es un/a " + this.tipo + ". Su nombre es: " + this.nombre + ". Cuesta: " + this.precio + (this.stock == true ? ". Hay stock" : ". No hay stock"));
+class Producto {
+    constructor(tipo, nombre, precio, stock) {
+        this.tipo = tipo;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
     }
 }
 
@@ -82,57 +78,39 @@ let arrayRinoneras = [
     rinoneraFeliz
 ];
 
-let productosALaVenta = [
-    arrayRemeras,
-    arrayBuzos,
-    arrayPosters,
-    arrayRinoneras,
+let arrayProductos = [
+    remeraStayAway,
+    remeraBrainDead,
+    remeraCereales,
+    remeraStayTrippy,
+    remeraMindControl,
+    remeraDevil,
+    buzoTop,
+    buzoEsqueleto,
+    buzoObey,
+    posterStrokes,
+    posterTameImpala,
+    posterTameImpalaPsico,
+    posterTLSP,
+    posterAMEspacio,
+    posterGorillaz,
+    posterFooFighters,
+    posterArcticMonkeys,
+    posterTameImpala,
+    posterRHCP,
+    posterImagineDragons,
+    rinoneraAlex,
+    rinoneraColaboKappa,
+    rinoneraFeliz,
     barbijoHongos,
     gorroPiluso
 ];
 
 
-// FUNCIONES
-//Calcular el costo total de un producto
+// FUNCIONES PARA CARRITO
 
-let costoTotalPorProducto = (producto, cantidad) => {
-    let costoTotal = 0;
-    if (producto.stock) {
-        costoTotal = producto.precio * cantidad;
-        return "El costo total es de " + costoTotal + '. Te estas llevando ' + cantidad + ' ' + producto.tipo;
-    } else {
-        return 'No tenemos stock por ahora del ' + producto.tipo + ' ' + producto.nombre + ', nuestra culpa, acá tenes un descuento del %5 para tu próxima compra';
-    }
-}
-
-
-//Primera entrega
+//Primer intento de carrito
 /*
-let esMayor = prompt('¿Listo para comprar tus entradas?');
-if (esMayor <= 'si') {
-    let podesComprarEntradas = '';
-    while (podesComprarEntradas < 18) {
-        podesComprarEntradas = prompt("¿Cuantos años tenes? Tenes que ser mayor de edad para comprar entradas")
-    } alert("Podes comprar entradas")
-}
-*/
-
-
-// filtrar productos que tienen stock
-
-function tienenStock(array) {
-    let productoConStock = [];
-    for (let i = 0; i < array.length; i++) {
-        if (array[i].stock == true) {
-            productoConStock.push(array[i])
-        }
-    }
-    return productoConStock;
-}
-
-console.log(tienenStock(arrayRemeras));
-
-let carrito = [];
 function agregarProductosAlCarrito() {
     let agregarProductos = '';
     while (agregarProductos != 'nada') {
@@ -142,42 +120,193 @@ function agregarProductosAlCarrito() {
     console.log('Te estas llevando ' + carrito)
 }
 
-agregarProductosAlCarrito();
+agregarProductosAlCarrito();*/
 
-function buscarEnElCarrito() {
-    let buscarProductoCarrito = prompt('Qué estas buscando de tu carrito?')
-    return carrito.filter((i) => i.nombre || i.tipo == buscarProductoCarrito)
+//INTENTO CARRITO DOS
+
+let carrito = [];
+
+function agregarProductos() {
+    let mostrarProductos = '';
+    let bandera = false;
+    let pregunta = prompt('¿Querés agregar productos a tu carrito? En el caso de no querer agregar, ingresá "No gracias"');
+
+    while (pregunta != 'No gracias' && bandera == false) {
+        mostrarProductos = prompt('Bien, estos son nuestros productos :). Elegí cuál querés escribiendo el número del que quieras, en el caso de no querer ningun producto más escribi "Termine":       REMERAS: 1. Stay Away, 2. Brain Dead, 3. Cereales, 4. Stay Trippy, 5. Mind Control, 6. Devil.       BUZOS: 7. TOP, 8. Esqueleto, 9. Obey.       POSTERS: 10. Strokes, 11. TameImpala, 12. Tame Impala Psico, 13. TLSP, 14. AM Espacio, 15. Gorillaz, 16. Foo Fighters, 17. Arctic Monkeys, 18. Tame Impala, 19. RHCP, 20. Imagine Dragons.      RIÑONERAS: 21. Alex, 22. Colabo Kappa, 23. Feliz.       BARBIJOS: 24. Hongos.       GORROS: 25. Piluso')
+        switch (mostrarProductos) {
+            case '1':
+                carrito.push(remeraStayAway);
+                alert('Agregado');
+                break;
+            case '2':
+                carrito.push(remeraBrainDead);
+                alert('Agregado');
+                break;
+            case '3':
+                carrito.push(remeraCereales);
+                alert('Agregado');
+                break;
+            case '4':
+                carrito.push(remeraStayTrippy);
+                alert('Agregado');
+                break;
+            case '5':
+                carrito.push(remeraMindControl);
+                alert('Agregado');
+                break;
+            case '6':
+                carrito.push(remeraDevil);
+                alert('Agregado');
+                break;
+            case '7':
+                carrito.push(buzoTop);
+                alert('Agregado');
+                break;
+            case '8':
+                carrito.push(buzoEsqueleto);
+                alert('Agregado');
+                break;
+            case '9':
+                carrito.push(buzoObey);
+                alert('Agregado');
+                break;
+            case '10':
+                carrito.push(posterStrokes);
+                alert('Agregado');
+                break;
+            case '11':
+                carrito.push(posterTameImpala);
+                alert('Agregado');
+                break;
+            case '12':
+                carrito.push(posterTameImpalaPsico);
+                alert('Agregado');
+                break;
+            case '13':
+                carrito.push(posterTLSP);
+                alert('Agregado');
+                break;
+            case '14':
+                carrito.push(posterAMEspacio);
+                alert('Agregado');
+                break;
+            case '15':
+                carrito.push(posterGorillaz);
+                alert('Agregado');
+                break;
+            case '16':
+                carrito.push(posterFooFighters);
+                alert('Agregado');
+                break;
+            case '17':
+                carrito.push(posterArcticMonkeys);
+                alert('Agregado');
+                break;
+            case '18':
+                carrito.push(posterTameImpala);
+                alert('Agregado');
+                break;
+            case '19':
+                carrito.push(posterRHCP);
+                alert('Agregado');
+                break;
+            case '20':
+                carrito.push(posterImagineDragons);
+                alert('Agregado');
+                break;
+            case '21':
+                carrito.push(rinoneraAlex);
+                alert('Agregado');
+                break;
+            case '22':
+                carrito.push(rinoneraColaboKappa);
+                alert('Agregado');
+                break;
+            case '23':
+                carrito.push(rinoneraFeliz);
+                alert('Agregado');
+                break;
+            case '24':
+                carrito.push(barbijoHongos);
+                alert('Agregado');
+                break;
+            case '25':
+                carrito.push(gorroPiluso);
+                alert('Agregado');
+                break;
+            case 'Termine':
+                alert('Okei!');
+                bandera = true;
+                break;
+            default:
+                alert('No tenemos ese...');
+        }
+
+        if (bandera) {
+            pregunta == 'No gracias';
+        }
+    }
 }
 
+agregarProductos();
+console.log('Estos son los productos que agregaste al carrito: ');
+console.log(carrito);
+
+function buscarEnElCarrito() {
+    let buscarProductoCarrito = prompt('Qué estas buscando de tu carrito? Escribi el NOMBRE del producto');
+    return carrito.filter((i) => i.nombre == buscarProductoCarrito)
+}
+
+console.log('Este es el producto que buscaste en tu carrito:');
 console.log(buscarEnElCarrito());
+
+function precioTotalaPagar() {
+    return carrito.reduce((acum, num) => acum + num.precio, 0)
+}
+
+console.log('Este es el precio total de tu carrito:')
+console.log(precioTotalaPagar());
+
+let carritoModificado = [];
+function sacarProductoDelCarrito() {
+    let pregunta = prompt('Queres sacar algun producto de tu carrito? Responde si o no');
+
+    if (pregunta == 'si') {
+        for (let i = 0; i < carrito.length; i++) {
+            alert('Tenes tu producto: ' + carrito[i].nombre + '. Su número de codigo es el: ' + i);
+            carritoModificado.push(carrito[i]);
+        }
+
+        let productoASacar = prompt('Que producto queres sacar? Escribí el código del producto');
+
+        if (productoASacar != -1) {
+            carritoModificado.splice(productoASacar, 1)
+        } else {
+            console.log('No tenes ese producto en tu carrito')
+        }}
+}
+
+sacarProductoDelCarrito();
+console.log('Así quedo tu carrito modificado:');
+console.log(carritoModificado);
+
+
+
+//FUNCIONES PARA FILTROS EN LA PAGINA MERCH
 
 function ordarPrecioMenorAMayor(array) {
     return array.sort((a, b) => a.precio - b.precio)
 }
 
-console.log(ordarPrecioMayorAMenor());
+console.log('Estamos ordenando de Menor a Mayor el array completo de remeras:')
+console.log(ordarPrecioMenorAMayor(arrayRemeras));
 
+/*
 function ordarPrecioMayorAMenor(array) {
     return array.sort((a, b) => b.precio - a.precio)
 }
 
-console.log(ordarPrecioMayorAMenor());
-
-function precioTotalaPagar () {
-    return carrito.reduce((acum, num)=>acum + num.precio, 0)
-}
-
-console.log(precioTotalaPagar());
-
-function sacarProductoDelCarrito (producto) {
-    let productoASacar = carrito.indexOf(producto);
-    if (productoASacar != -1) {
-        carrito.splice(productoASacar, 1)
-    }else {
-        console.log('No tenes ese producto en tu carrito')
-    }
-}
-
-console.log(sacarProductoDelCarrito('buzoTOP'));
+console.log(ordarPrecioMayorAMenor(arrayRemeras));
+*/
 
 
