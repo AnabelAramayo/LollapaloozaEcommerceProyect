@@ -109,21 +109,6 @@ let arrayProductos = [
 
 // FUNCIONES PARA CARRITO
 
-//Primer intento de carrito
-/*
-function agregarProductosAlCarrito() {
-    let agregarProductos = '';
-    while (agregarProductos != 'nada') {
-        agregarProductos = prompt('¿Qué queres llevarte?');
-        carrito.push(agregarProductos)
-    }
-    console.log('Te estas llevando ' + carrito)
-}
-
-agregarProductosAlCarrito();*/
-
-//INTENTO CARRITO DOS
-
 let carrito = [];
 
 function agregarProductos() {
@@ -249,23 +234,49 @@ function agregarProductos() {
 }
 
 agregarProductos();
-console.log('Estos son los productos que agregaste al carrito: ');
-console.log(carrito);
 
-function buscarEnElCarrito() {
-    let buscarProductoCarrito = prompt('Qué estas buscando de tu carrito? Escribi el NOMBRE del producto');
-    return carrito.filter((i) => i.nombre == buscarProductoCarrito)
+console.log('Estos son los productos que agregaste a tu carrito: ')
+console.log(carrito)
+
+function mostrar() {
+    for (let i = 0; i < carrito.length; i++) {
+        document.getElementById('primerProducto').innerHTML = document.getElementById('primerProducto').innerHTML + `
+        <section class="contenedorProductoCarrito">
+                    <div class= "contenedorTextoCarrito">
+                        ${carrito[i].tipo +  ' ' + carrito[i].nombre}
+                        $ ${carrito[i].precio}
+                    <div class="contenedorContadorCarrito">
+                    <button type="button" value="Menos" class="botonMenos">-</button>
+                    <p>1</p>
+                    <button type="button" value="Mas" class="botonMas">+</button>
+                    </div>
+                </div>
+            </section>` + 
+            `
+            <section class="contenedorSubtotal">
+            $ ${carrito[i].precio}
+            <button type="button" class="botonEliminar"><i class="fas fa-trash-alt"></i></button>
+            </section>
+            `;
+    }
 }
 
-console.log('Este es el producto que buscaste en tu carrito:');
-console.log(buscarEnElCarrito());
+
+mostrar();
+
+function buscarEnElCarrito() {
+    let buscarProductoCarrito = document.getElementById('inputBusqueda').value;
+    let resultado = carrito.filter((i) => i.nombre == buscarProductoCarrito);
+    return document.getElementById('resultadoBusqueda').innerHTML = document.getElementById('resultadoBusqueda').innerHTML + 'Estabas buscando: ' + resultado[0].tipo + ' ' + resultado[0].nombre + ' ' + '$' + resultado[0].precio;
+}
+
+buscarEnElCarrito();
 
 function precioTotalaPagar() {
     return carrito.reduce((acum, num) => acum + num.precio, 0)
 }
 
-console.log('Este es el precio total de tu carrito:')
-console.log(precioTotalaPagar());
+document.getElementById('resultadoTotal').innerHTML = precioTotalaPagar();
 
 let carritoModificado = [];
 function sacarProductoDelCarrito() {
@@ -283,7 +294,8 @@ function sacarProductoDelCarrito() {
             carritoModificado.splice(productoASacar, 1)
         } else {
             console.log('No tenes ese producto en tu carrito')
-        }}
+        }
+    }
 }
 
 sacarProductoDelCarrito();
@@ -308,5 +320,3 @@ function ordarPrecioMayorAMenor(array) {
 
 console.log(ordarPrecioMayorAMenor(arrayRemeras));
 */
-
-

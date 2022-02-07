@@ -107,7 +107,7 @@ footer {
     align-items: center;
 }
 
-.inputSuscribite {
+#inputSuscribite {
     padding: 7px 30px; 
     margin-top: 15px;
     margin-bottom: 15px;
@@ -287,7 +287,7 @@ VER PORQUE NO AGARRA LA IMG DE FONDO
     color:white;
 }
 
-.inputBusqueda{
+#inputBusqueda{
     height: 30px;
     width: 65%;
     border:0;
@@ -323,4 +323,88 @@ VER PORQUE NO AGARRA LA IMG DE FONDO
     text-align:center;
     font-family: sans-serif;
     padding: 5px;
+}
+
+
+/*PAGINA CARRITO*/
+
+#resultadoBusqueda {
+    text-align:center;
+    background-color:yellow;
+}
+
+#primerProducto {
+    display:flex;
+    /* text-align:center; */
+    flex-direction: column;
+    padding: 35px;
+}
+
+main h2 {
+    text-align:center;
+}
+
+/* .contenedorCarrito{ */
+    /* display:flex; */
+    /* justify-content: space-between; */
+    /* margin-right:20px; */
+    /* align-items:center; */
+/* }  */
+
+#textoCarrito {
+    display:flex;
+    justify-content: space-between;
+    margin-left:80px;
+    margin-right:80px;
+}
+
+.contenedorTextoCarrito{
+    display:flex;
+    /* justify-content:center; */
+    /* align-items:center; */
+    flex-direction: column;
+    padding: 35px;
+}
+
+.contenedorContadorCarrito{
+    display:flex;
+    /* justify-content:center; */
+    align-items:center;
+    
+    /* justify-content:space-around; */
+}
+
+.contenedorContadorCarrito p {
+    padding:15px;
+}
+
+.contenedorSubtotal {
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    /* padding:10px; */
+    /* margin:20px; */
+}
+
+.contenedorFinal{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.botonIniciarCompra {
+    padding: 7px 30px;
+    background-color: #CF99E8;
+    color:black;
+    font-family: sans-serif;
+    font-size: 20px;
+    border: 0;
+    margin-top:15px;
+    margin-bottom:30px;
+}
+
+
+.botonEliminar {
+    margin:15px;
 }
