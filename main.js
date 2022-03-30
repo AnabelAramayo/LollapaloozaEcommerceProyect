@@ -110,7 +110,7 @@ let arrayProductos = [
 // FUNCIONES PARA CARRITO
 
 let carrito = [];
-
+/*
 function agregarProductos() {
     let mostrarProductos = '';
     let bandera = false;
@@ -235,9 +235,20 @@ function agregarProductos() {
 
 agregarProductos();
 
+*/
+
+let boton = document.getElementsByClassName ('botonAgregarAlCarrito')
+
+boton.addEventListener ("click", agregarProductos )
+
+function agregarProductos (){
+    carrito.push(barbijoHongos);
+}
+
+
 console.log('Estos son los productos que agregaste a tu carrito: ')
 console.log(carrito)
-
+/*
 function mostrar() {
     for (let i = 0; i < carrito.length; i++) {
         document.getElementById('primerProducto').innerHTML = document.getElementById('primerProducto').innerHTML + `
@@ -264,20 +275,24 @@ function mostrar() {
 
 mostrar();
 
+*/
+
+/*
 function buscarEnElCarrito() {
     let buscarProductoCarrito = document.getElementById('inputBusqueda').value;
     let resultado = carrito.filter((i) => i.nombre == buscarProductoCarrito);
     return document.getElementById('resultadoBusqueda').innerHTML = document.getElementById('resultadoBusqueda').innerHTML + 'Estabas buscando: ' + resultado[0].tipo + ' ' + resultado[0].nombre + ' ' + '$' + resultado[0].precio;
 }
 
-buscarEnElCarrito();
-
+buscarEnElCarrito();*/
+/*
 function precioTotalaPagar() {
     return carrito.reduce((acum, num) => acum + num.precio, 0)
 }
 
 document.getElementById('resultadoTotal').innerHTML = precioTotalaPagar();
-
+*/
+/*
 let carritoModificado = [];
 function sacarProductoDelCarrito() {
     let pregunta = prompt('Queres sacar algun producto de tu carrito? Responde si o no');
@@ -302,17 +317,17 @@ sacarProductoDelCarrito();
 console.log('Así quedo tu carrito modificado:');
 console.log(carritoModificado);
 
-
+*/
 
 //FUNCIONES PARA FILTROS EN LA PAGINA MERCH
-
+/*
 function ordarPrecioMenorAMayor(array) {
     return array.sort((a, b) => a.precio - b.precio)
 }
 
 console.log('Estamos ordenando de Menor a Mayor el array completo de remeras:')
 console.log(ordarPrecioMenorAMayor(arrayRemeras));
-
+*/
 /*
 function ordarPrecioMayorAMenor(array) {
     return array.sort((a, b) => b.precio - a.precio)

@@ -213,7 +213,7 @@ video,
     color:#0F071F;
 }
 
-.botonAgregarAlCarrito {
+#botonAgregarAlCarrito {
         padding: 7px 30px;
         background-color: #AAB7B8;
         color:black;
